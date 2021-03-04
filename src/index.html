@@ -9,9 +9,80 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Formulário Graveto!</title>
+    <?!= include("jquery-3.5.1.min"); ?>
+    <?!= include("preload-css"); ?>
+    <?!= include("main-css"); ?>
   </head>
+
   <body>
-    <h1>Init formulário Gaveto :)!</h1>
+    <main class="page payment-page">
+      <section class="payment-form dark">
+        <div class="container">
+          <div class="block-heading">
+            <h2>Form Vendas</h2>
+            <p>Formulário de vendas bd googlesheets - Html / Css / Js / Jquery.</p>
+          </div>
+          <form>
+            <div class="products">
+              <h3 class="title">Produtos</h3>
+              <div class="item">
+                <span class="price">R$ 10,00</span>
+                <p class="item-name">Banana</p>
+                <p class="item-description">Fruta</p>
+              </div>
+              <div class="item">
+                <span class="price">R$ 20,00</span>
+                <p class="item-name">Maçã</p>
+                <p class="item-description">Fruta</p>
+              </div>
+              <div class="total">Total<span class="price">R$ 30,00</span></div>
+            </div>
+            <div class="card-details">
+              <h3 class="title">Incluir Produto</h3>
+              <div class="row">
+                <div class="form-group col-sm-4">
+                  <label for="card-holder">Tipo</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Escolha o tipo...</option>
+                    <option>Frutas</option>
+                    <option>Legumes</option>
+                   
+                  </select>
+                </div>
+                <div class="form-group col-sm-8">
+                  <label for="card-holder">Produto</label>
+                  <select id="inputState" class="form-control">
+                    <option>Aqui vai aparecer só os produtos relacionados com o tipo</option>
+                    <option>Aqui vai aparecer só os produtos relacionados com o tipo</option>
+                   </select>
+                </div>
+
+                <div class="form-group col-sm-3">
+                  <label for="card-holder">Qt.</label>
+                  <input id="cvc" type="text" class="form-control" placeholder="Qt." aria-label="Card Holder" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group col-sm-3">
+                  <label for="card-holder">V. Unitário</label>
+                  <input id="cvc" type="text" class="form-control" placeholder="V. Unitário" aria-label="Card Holder" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="card-holder">Total</label>
+                  <input id="cvc" type="text" class="form-control" placeholder="Total" aria-label="Card Holder" aria-describedby="basic-addon1">
+                </div>
+               
+                <div class="form-group col-sm-6">
+                  <button type="button" class="btn btn-primary btn-block">Incluir</button>
+                </div>
+                <div class="form-group col-sm-6">
+                  <button type="button" class="btn btn-warning btn-block">Finalizar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

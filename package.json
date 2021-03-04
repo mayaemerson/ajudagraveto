@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mayaemerson/ajudagraveto/issues"
   },
-  "homepage": "https://github.com/mayaemerson/ajudagraveto#readme"
+  "homepage": "https://github.com/mayaemerson/ajudagraveto#readme",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.26"
+  }
 }
