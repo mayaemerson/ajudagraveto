@@ -1,0 +1,19 @@
+{
+  "name": "formdropdow",
+  "version": "1.0.0",
+  "description": "Ajuda com formulário googlesheets dropdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayaemerson/ajudagraveto.git"
+  },
+  "author": "Emerson Maia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayaemerson/ajudagraveto/issues"
+  },
+  "homepage": "https://github.com/mayaemerson/ajudagraveto#readme"
+}
