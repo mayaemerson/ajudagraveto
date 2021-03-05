@@ -15,74 +15,180 @@
   </head>
 
   <body>
-    <main class="page payment-page">
-      <section class="payment-form dark">
-        <div class="container">
-          <div class="block-heading">
-            <h2>Form Vendas</h2>
-            <p>Formulário de vendas bd googlesheets - Html / Css / Js / Jquery.</p>
-          </div>
-          <form>
-            <div class="products">
-              <h3 class="title">Produtos</h3>
-              <div class="item">
-                <span class="price">R$ 10,00</span>
-                <p class="item-name">Banana</p>
-                <p class="item-description">Fruta</p>
-              </div>
-              <div class="item">
-                <span class="price">R$ 20,00</span>
-                <p class="item-name">Maçã</p>
-                <p class="item-description">Fruta</p>
-              </div>
-              <div class="total">Total<span class="price">R$ 30,00</span></div>
-            </div>
-            <div class="card-details">
-              <h3 class="title">Incluir Produto</h3>
-              <div class="row">
-                <div class="form-group col-sm-4">
-                  <label for="card-holder">Tipo</label>
-                  <select id="inputState" class="form-control">
-                    <option selected>Escolha o tipo...</option>
-                    <option>Frutas</option>
-                    <option>Legumes</option>
-                   
-                  </select>
-                </div>
-                <div class="form-group col-sm-8">
-                  <label for="card-holder">Produto</label>
-                  <select id="inputState" class="form-control">
-                    <option>Aqui vai aparecer só os produtos relacionados com o tipo</option>
-                    <option>Aqui vai aparecer só os produtos relacionados com o tipo</option>
-                   </select>
-                </div>
+   <div id="modalpedido">
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary cente-containter" data-toggle="modal" data-target="#exampleModal">
+  Novo Pedido
+</button>
 
-                <div class="form-group col-sm-3">
-                  <label for="card-holder">Qt.</label>
-                  <input id="cvc" type="text" class="form-control" placeholder="Qt." aria-label="Card Holder" aria-describedby="basic-addon1">
-                </div>
-                <div class="form-group col-sm-3">
-                  <label for="card-holder">V. Unitário</label>
-                  <input id="cvc" type="text" class="form-control" placeholder="V. Unitário" aria-label="Card Holder" aria-describedby="basic-addon1">
-                </div>
-                <div class="form-group col-sm-6">
-                  <label for="card-holder">Total</label>
-                  <input id="cvc" type="text" class="form-control" placeholder="Total" aria-label="Card Holder" aria-describedby="basic-addon1">
-                </div>
-               
-                <div class="form-group col-sm-6">
-                  <button type="button" class="btn btn-primary btn-block">Incluir</button>
-                </div>
-                <div class="form-group col-sm-6">
-                  <button type="button" class="btn btn-warning btn-block">Finalizar</button>
-                </div>
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pedido N˚ 2021042938SC</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <main class="page payment-page"id="form-pedido" >
+          <section class="payment-form dark">
+            <div class="container">
+              <div class="block-heading">
+                <h2>Logo Empresa</h2>
+                <p>Formulário de vendas bd googlesheets - Html / Css / Js / Jquery.</p>
               </div>
+              <div id="boddy-pedido">
+              <form>
+                <div class="card-details">
+                  <h3 class="title"></h3>
+                  <div class="row">
+                    <div class="form-group col-sm-5">
+                      <label for="card-holder">Produto</label>
+                      <select id="inputState" class="form-control">
+                        <?!= prodrop ?>
+                       </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="card-holder">Tipo</label>
+                      <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
+                    </div>  
+                    <div class="form-group col-sm-3">
+                      <label for="card-holder">Unid.</label>
+                      <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
+                    </div>  
+                    <div class="form-group col-sm-2">
+                    <label for="card-holder">Qt.</label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                     <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="9">10</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-3">
+                    <label for="card-holder">V Unit.</label>
+                    <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
+                  </div>  
+                  <div class="form-group col-sm-3">
+                    <label for="card-holder">Total</label>
+                    <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
+                  </div>  
+    
+                  <div class="form-group col-sm-4">
+                    <button type="button" class="btn btn-primary btn-block">Incluir Item</button>
+                  </div>
+                  
+                  <div class="form-group col-sm-12">
+                    <button type="button" class="btn btn-warning btn-block">Finalizar Pedido</button>
+                    </div>
+                    </div><!--fim row-->
+    
+                  
+                </div><!--fim card-->
+                <div class="products">
+                  
+                  <h3 class="title">Produtos</h3>
+                  
+                </br>
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cod</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Unid</th>
+                        <th scope="col">Peso</th>
+                        <th scope="col">Qt.</th>
+                        <th scope="col">V. Unit</th>
+                        <th scope="col">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">2250</th>
+                        <td>Fruta</td>
+                        <td>Maça</td>
+                        <td>Kg</td>
+                        <td>1.5</td>
+                        <td>2</td>
+                        <td>12,00</td>
+                        <td>18,00</td>
+                       </tr>
+                       <tr>
+                        <th scope="row">2250</th>
+                        <td>Fruta</td>
+                        <td>Maça</td>
+                        <td>Kg</td>
+                        <td>1.5</td>
+                        <td>2</td>
+                        <td>12,00</td>
+                        <td>18,00</td>
+                       </tr>
+                       <tr>
+                        <th scope="row">2250</th>
+                        <td>Fruta</td>
+                        <td>Mamão</td>
+                        <td>Unid</td>
+                        <td></td>
+                        <td>2</td>
+                        <td>7,00</td>
+                        <td>14,00</td>
+                       </tr>
+                       <tr>
+                        <th scope="row">2250</th>
+                        <td>Fruta</td>
+                        <td>Maça</td>
+                        <td>Kg</td>
+                        <td>1.5</td>
+                        <td>2</td>
+                        <td>12,00</td>
+                        <td>18,00</td>
+                       </tr>
+                       <tr>
+                        <th scope="row">2250</th>
+                        <td>Fruta</td>
+                        <td>Maça</td>
+                        <td>Kg</td>
+                        <td>1.5</td>
+                        <td>2</td>
+                        <td>12,00</td>
+                        <td>18,00</td>
+                       </tr>
+                      
+                    </tbody>
+                  </table>
+                  <div class="total">Sub Total<span class="price">R$ 86,00</span></div>
+                  <div class="total">Desc. R$<span class="price">R$ </span></div>
+                  <div class="total">Entrega<span class="price">R$ 10,00</span></div>
+                  <div class="total">Total<span class="price">R$ 96,00</span></div>
+                </div> <!--fim products-->
+               
+              </form>
+            </div><!--div form pedeido-->
             </div>
-          </form>
-        </div>
-      </section>
-    </main>
-  </body>
+          </section>
+        </main>
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-success">Finalizar Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div><!--fim modal pedido-->
+
+    
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
