@@ -42,57 +42,47 @@
               <div id="boddy-pedido">
               <form>
                 <div class="card-details">
-                  <h3 class="title"></h3>
+                
+                  <h3 class="title"><span>Cod Produto</span><span> # </span><span id="id-produto"></span> / <span></span><span id="tipo-ped"></span></h3>
                   <div class="row">
-                    <div class="form-group col-sm-5">
+                    <div class="form-group col-sm-9">
                       <label for="card-holder">Produto</label>
-                      <select id="inputState" class="form-control">
+                      <select id="produtoped" class="form-control">
                         <?!= prodrop ?>
                        </select>
                     </div>
-                    <div class="form-group col-sm-4">
-                      <label for="card-holder">Tipo</label>
-                      <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
-                    </div>  
                     <div class="form-group col-sm-3">
-                      <label for="card-holder">Unid.</label>
-                      <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
-                    </div>  
-                    <div class="form-group col-sm-2">
-                    <label for="card-holder">Qt.</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                     <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="9">10</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-sm-3">
-                    <label for="card-holder">V Unit.</label>
-                    <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
-                  </div>  
-                  <div class="form-group col-sm-3">
-                    <label for="card-holder">Total</label>
-                    <input id="cvc" type="text" class="form-control" placeholder="" aria-label="Card Holder" aria-describedby="basic-addon1">
-                  </div>  
-    
-                  <div class="form-group col-sm-4">
+                      <label for="qtped">Qt.</label>
+                      <select type="number"  class="custom-select mr-sm-2" id="qtped">
+                        <?!= cmpquat ?>
+                        
+                      </select>
+                    </div>
+                   
+                    
+                    <div class="form-group col-sm-12">
+                      <span id="desc-text"> </span><span id="desc-ped"></span>
+                      </div>
+                     <div class="form-group col-sm-12">
+                        <span id="unid-text"></span><span id="unidc-ped"></span>
+                      </div>
+                      <div class="form-group col-sm-12">
+                        <span  id="vunit-text"></span><span id="rs-real"> </span><span  type="text"  id="vunit-ped"></span>
+                      </div>
+                      <div class="form-group col-sm-12">
+                       <span id="total-text"></span><span id="Total-includ"></span>
+                      </div>
+               <div class="form-group col-sm-6">
                     <button type="button" class="btn btn-primary btn-block">Incluir Item</button>
                   </div>
                   
-                  <div class="form-group col-sm-12">
+                  <div class="form-group col-sm-6">
                     <button type="button" class="btn btn-warning btn-block">Finalizar Pedido</button>
                     </div>
                     </div><!--fim row-->
     
                   
-                </div><!--fim card-->
+                </div><!--fim card detalhe-->
                 <div class="products">
                   
                   <h3 class="title">Produtos</h3>
@@ -102,10 +92,8 @@
                     <thead>
                       <tr>
                         <th scope="col">Cod</th>
-                        <th scope="col">Tipo</th>
                         <th scope="col">Produto</th>
                         <th scope="col">Unid</th>
-                        <th scope="col">Peso</th>
                         <th scope="col">Qt.</th>
                         <th scope="col">V. Unit</th>
                         <th scope="col">Total</th>
@@ -115,53 +103,21 @@
                       <tr>
                         <th scope="row">2250</th>
                         <td>Fruta</td>
-                        <td>Maça</td>
                         <td>Kg</td>
-                        <td>1.5</td>
                         <td>2</td>
                         <td>12,00</td>
                         <td>18,00</td>
                        </tr>
                        <tr>
-                        <th scope="row">2250</th>
-                        <td>Fruta</td>
-                        <td>Maça</td>
-                        <td>Kg</td>
-                        <td>1.5</td>
-                        <td>2</td>
-                        <td>12,00</td>
-                        <td>18,00</td>
-                       </tr>
-                       <tr>
-                        <th scope="row">2250</th>
-                        <td>Fruta</td>
-                        <td>Mamão</td>
-                        <td>Unid</td>
-                        <td></td>
-                        <td>2</td>
-                        <td>7,00</td>
-                        <td>14,00</td>
-                       </tr>
-                       <tr>
-                        <th scope="row">2250</th>
-                        <td>Fruta</td>
-                        <td>Maça</td>
-                        <td>Kg</td>
-                        <td>1.5</td>
-                        <td>2</td>
-                        <td>12,00</td>
-                        <td>18,00</td>
-                       </tr>
-                       <tr>
-                        <th scope="row">2250</th>
-                        <td>Fruta</td>
-                        <td>Maça</td>
-                        <td>Kg</td>
-                        <td>1.5</td>
-                        <td>2</td>
-                        <td>12,00</td>
-                        <td>18,00</td>
-                       </tr>
+                        <tr>
+                          <th scope="row">2250</th>
+                          <td>Fruta</td>
+                          <td>Kg</td>
+                          <td>2</td>
+                          <td>12,00</td>
+                          <td>18,00</td>
+                         </tr>
+                         <tr>
                       
                     </tbody>
                   </table>
@@ -180,7 +136,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-success">Finalizar Comprar</button>
+        <!-- <button type="button" class="btn btn-success" id="enviar-pedido">Finalizar Comprar</button> -->
       </div>
     </div>
   </div>
@@ -195,5 +151,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <?!= include("pesquisar-produto-js"); ?>
   </body>
 </html>
