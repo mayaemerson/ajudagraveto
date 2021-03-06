@@ -45,12 +45,12 @@
                                 </div>
                                 <div class="form-group row justify-content-center mb-0">
                                     <div class="col-md-12 px-3 mt-4"> <a href="#">
-                                            <p class="thanks"  data-toggle="modal" data-target="#modal-pedido"  >Pedido</p>
+                                            <p class="thanks"  data-toggle="modal" data-target="#modal-pedido" id="init-pedido"  >Pedido</p>
                                         </a> </div>
                                 </div>
                                 <div class="form-group row justify-content-center mb-0">
                                     <div class="col-md-12 px-3"><a href="#">
-                                        <p class="conditions" data-toggle="modal" data-target="#modal-cadastro">Criar conta</p>
+                                        <p class="conditions" data-toggle="modal" data-target="#modal-cadastro" id="criar-conta">Criar conta</p>
                                       </a> </div>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Pedido N˚ 2021042938SC</h5>
+        <h5 class="modal-title" id="numero-pedido"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -80,13 +80,13 @@
             <div class="container">
               <div class="block-heading">
                 <h2>Logo Empresa</h2>
-                <p>Formulário de vendas bd googlesheets - Html / Css / Js / Jquery.</p>
+                <p>Formulário de Pedidos bd googlesheets - Html / Css / Js / Jquery.</p>
               </div>
               <div id="boddy-pedido">
               <form>
                 <div class="card-details">
                 
-                  <h3 class="title"><span>Cod Produto</span><span> # </span><span id="id-produto"></span> / <span></span><span id="tipo-ped"></span></h3>
+                  <h3 class="title"><span id="cod-prod"> </span><span id="simbol-produto">  </span><span id="id-produto"></span><span id="simbol-div" ></span><span id="tipo-ped"></span></h3>
                   <div class="row">
                     <div class="form-group col-sm-9">
                       <label for="card-holder">Produto</label>
@@ -116,11 +116,11 @@
                        <span id="total-text"></span><span id="Total-includ"></span>
                       </div>
                <div class="form-group col-sm-6">
-                    <button type="button" class="btn btn-primary btn-block">Incluir Item</button>
+                    <button type="button" class="btn btn-primary btn-block" id="icluir-pedido"  >Incluir Item</button>
                   </div>
                   
                   <div class="form-group col-sm-6">
-                    <button type="button" class="btn btn-warning btn-block">Finalizar Pedido</button>
+                    <button type="button" class="btn btn-warning btn-block" id="finalizar-pedido">Finalizar Pedido</button>
                     </div>
                     </div><!--fim row-->
     
@@ -192,7 +192,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cadastro N˚ 2021042938SC</h5>
+        <h5 class="modal-title" id="numero-cadastro"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -218,53 +218,57 @@
                 <div class="row">
                   <div class="form-group col-sm-6">
                     <label for="id-nome-cd" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="id-nome-cd" placeholder="">
+                    <input type="text" class="form-control" id="nome-cd" placeholder="">
                 </div>
             
                 <div class="form-group col-sm-6">
                   <label for="id-nome-cd" class="form-label">Sobre Nome</label>
-                  <input type="text" class="form-control" id="id-nome-cd" placeholder="">
+                  <input type="text" class="form-control" id="sobre-nome-cd" placeholder="">
               </div>
-              <div class="form-group col-sm-5">
+              <div class="form-group col-sm-6">
                 <label for="id-nome-cd" class="form-label">CPF / CNP</label>
-                <input type="text" class="form-control" id="id-nome-cd" placeholder="">
+                <input type="text" class="form-control" id="cpf-cd" placeholder="">
             </div>
-            <div class="form-group col-sm-7">
+            <div class="form-group col-sm-6">
+              <label for="id-nome-cd" class="form-label">Fone</label>
+              <input type="text" class="form-control" id="fone-cd" placeholder="">
+          </div>
+            <div class="form-group col-sm-12">
               <label for="id-nome-cd" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="id-nome-cd" placeholder="">
+              <input type="email" class="form-control" id="email-cd" placeholder="">
           </div>
           <div class="form-group col-sm-9">
             <label for="id-nome-cd" class="form-label">Endereço</label>
-            <input type="text" class="form-control" id="id-nome-cd" placeholder="Av, Rua, Praça etc...">
+            <input type="text" class="form-control" id="end-cd" placeholder="Av, Rua, Praça etc...">
         </div>
         <div class="form-group col-sm-3">
           <label for="id-nome-cd" class="form-label">N˚</label>
-          <input type="text" class="form-control" id="id-nome-cd" placeholder="">
+          <input type="text" class="form-control" id="n-cd" placeholder="">
       </div>
 
       <div class="form-group col-sm-7">
         <label for="id-nome-cd" class="form-label">Complemento</label>
-        <input type="text" class="form-control" id="id-nome-cd" placeholder="Aptˆ, Casa Futo etc...">
+        <input type="text" class="form-control" id="complemento-cd" placeholder="Aptˆ, Casa Futo etc...">
     </div>
     <div class="form-group col-sm-5">
       <label for="id-nome-cd" class="form-label">Bairro</label>
-      <input type="text" class="form-control" id="id-nome-cd" placeholder="">
+      <input type="text" class="form-control" id="bairro-cd" placeholder="">
   </div>
   <div class="form-group col-sm-9">
     <label for="id-nome-cd" class="form-label">Cidade</label>
-    <input type="text" class="form-control" id="id-nome-cd" placeholder="Aptˆ, Casa Futo etc...">
+    <input type="text" class="form-control" id="cidade-cd" placeholder="">
 </div>
 <div class="form-group col-sm-3">
   <label for="id-nome-cd" class="form-label">Uf</label>
-  <input type="text" class="form-control" id="id-nome-cd" placeholder="">
+  <input type="text" class="form-control" id="uf-cd" placeholder="">
 </div>
 <div class="form-group col-sm-12">
   <label for="id-nome-cd" class="form-label">Obs.</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <textarea class="form-control" id="obs-cd" rows="3"></textarea>
 </div>
 
 <div class="form-group col-sm-12">
-  <button type="button" class="btn btn-primary " >Enviar</button>
+  <button type="button" class="btn btn-primary " id="btn-salvar-cadastro" >Enviar</button>
 </div>
             </div><!--fim row-->
                  
@@ -294,6 +298,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <?!= include("pesquisar-produto-js"); ?>
     <?!= include("newsletter-css"); ?>
+    <?!= include("ids-gerais-js"); ?>
     
   </body>
 </html>

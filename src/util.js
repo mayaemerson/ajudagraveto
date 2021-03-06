@@ -4,7 +4,7 @@ var todayT = Utilities.formatDate(new Date(), "GMT-0300", "dd/MM/yyyy' 'HH:mm:ss
  var Mes = Utilities.formatDate(new Date(), "GMT-0300", "MM")
  var Dia = Utilities.formatDate(new Date(), "GMT-0300", "dd")
  var horaminut = Utilities.formatDate(new Date(), "GMT-0300", "HH:mm:ss")
-
+ var segundos = Utilities.formatDate(new Date(), "GMT-0300", "ss")
 
 
 function include(callsrc){

@@ -1,7 +1,7 @@
 function pesquisarproduto(codpesquisa){
  
   const lpesquisa = wsprodutos.getRange(2,1,wsprodutos.getLastRow()).getValues()
-  Logger.log(lpesquisa)
+  // Logger.log(lpesquisa)
   
   const result = lpesquisa.pesquisapd(codpesquisa)
   var Linha = result + 2

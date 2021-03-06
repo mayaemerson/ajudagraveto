@@ -1,0 +1,25 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function (tablecadastro) {
+
+    document.getElementById("init-pedido").addEventListener("click", idNovoPedido)
+    document.getElementById("criar-conta").addEventListener("click", idNovoPedido)
+  
+})
+
+function idNovoPedido() {
+  
+ 
+  google.script.run.withSuccessHandler(carregarIdNpedido).NovoPedidoId()
+  // console.log(codpesquisa)
+}
+
+function carregarIdNpedido(options){
+  document.getElementById("numero-pedido").innerText = "Pedido n˚ " + " " + options[0]
+  document.getElementById("numero-cadastro").innerText = "Pedido n˚ " + " " + options[1]
+
+}
+
+
+
+
+</script>

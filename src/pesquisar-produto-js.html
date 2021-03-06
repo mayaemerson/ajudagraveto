@@ -2,19 +2,22 @@
   document.addEventListener("DOMContentLoaded", function (tablecadastro) {
   $("#produtoped").on("change", pesquisarprod )
   $("#qtped").on("change", pesquisarprod )
-  
+  $("#icluir-pedido").hide()
+  $("#finalizar-pedido").hide()
 })
 
 
 
 
 function pesquisarprod() {
-
+  
   var codpesquisa = document.getElementById("produtoped").value
   google.script.run.withSuccessHandler(carregar).pesquisarproduto(codpesquisa)
   // console.log(codpesquisa)
 }
 function carregar(retorno){
+
+
   if (retorno != 'Sretorno'){
     const vunti = retorno[5]
     const formatvut = new Intl.NumberFormat('pt-BR',{
@@ -23,23 +26,23 @@ function carregar(retorno){
       minimunFractionDigits: 2
     }).format(vunti)
 
-    
+    $("#icluir-pedido").show()
+    $("#finalizar-pedido").show()
+
+    document.getElementById("cod-prod").innerText = "COD PRODUTO :" + " "
+    document.getElementById("simbol-produto").innerText = "#"
+    document.getElementById("simbol-div").innerText = "/" + " "
     document.getElementById("desc-text").innerText = "Descrição" + " " + ":" + " "
     document.getElementById("unid-text").innerText = "Unidade" + " " + ":" + " "
     document.getElementById("vunit-text").innerText = "V. Unitário" + " " + ":" + " "
     document.getElementById("total-text").innerText = "Total" + " " + ":" + " "
-
     document.getElementById("id-produto").innerText = retorno[0] + " "
     document.getElementById("desc-ped").innerText = retorno[2]
     document.getElementById("unidc-ped").innerText = retorno[3]
-    
     document.getElementById("vunit-ped").innerText = formatvut
     document.getElementById("tipo-ped").innerText = retorno[1]
-    
-    
     const qtpd = document.getElementById("qtped").value
     const result =  vunti *  qtpd 
-   
     const vtotal = result
     document.getElementById("Total-includ").innerText = new Intl.NumberFormat('pt-BR',{
       style: 'currency',
@@ -48,4 +51,19 @@ function carregar(retorno){
     }).format(vtotal)
   }
   }
+
+function limparCamposFormPedido(){
+  document.getElementById("desc-text").value = ""
+    document.getElementById("unid-text").value = ""
+    document.getElementById("vunit-text").value = ""
+    document.getElementById("total-text").value = ""
+
+    document.getElementById("id-produto").value = ""
+    document.getElementById("desc-ped").ivalue = ""
+    document.getElementById("unidc-ped").innerText = ""
+    
+    document.getElementById("vunit-ped").value = ""
+    document.getElementById("tipo-ped").value = ""
+    
+}
   </script>
