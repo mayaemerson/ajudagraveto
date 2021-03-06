@@ -15,14 +15,57 @@
   </head>
 
   <body>
+    <!-- <div id="id-botoes-init cente-containter"></div>
+    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#modal-pedido">
+      Novo Pedido
+    </button>
+    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#modal-pedido">
+      Novo Pedido
+    </button>
+  </div> -->
+  <div class="bg-grey">
+    <div class="container">
+        <div class="row justify justify-content-center">
+            <div class="col-12 col-lg-9 col-xl-8">
+                <form class="">
+                    <div class="card">
+                        <div class="row justify-content-center">
+                            <div class="col-md-9 col-11">
+                                <div class="row mt-0">
+                                    <div class="col-md-12 ">
+                                        <h4 class="text-center heading">newsletter</h4>
+                                        <p class="text-center sub-heading">Faça parte de nossa lista e receba nossas ofertas</p>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-3">
+                                    <div class="col-md-12 mb-0"> <input id="e-mail" type="text" placeholder="ENTRE COM SEU EMAIL" name="email" class="form-control input-box rm-border text-center"> </div>
+                                </div>
+                                <div class="form-group row justify-content-center mb-0">
+                                    <div class="col-md-12 px-3"> <input type="submit" value="ENVIAR!" class="btn btn-block btn-black rm-border"> </div>
+                                </div>
+                                <div class="form-group row justify-content-center mb-0">
+                                    <div class="col-md-12 px-3 mt-4"> <a href="#">
+                                            <p class="thanks"  data-toggle="modal" data-target="#modal-pedido"  >Pedido</p>
+                                        </a> </div>
+                                </div>
+                                <div class="form-group row justify-content-center mb-0">
+                                    <div class="col-md-12 px-3">
+                                        <p class="conditions">Criar conta</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
    <div id="modalpedido">
       <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary cente-containter" data-toggle="modal" data-target="#exampleModal">
-  Novo Pedido
-</button>
-
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="modal-pedido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -152,5 +195,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <?!= include("pesquisar-produto-js"); ?>
+    <?!= include("newsletter-css"); ?>
+    
   </body>
 </html>

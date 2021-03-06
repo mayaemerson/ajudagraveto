@@ -14,17 +14,9 @@ function pesquisarproduto(codpesquisa){
     carregar.unid= wsprodutos.getRange(Linha, 4).getValue()
     carregar.vunit = wsprodutos.getRange(Linha, 5).getValue()
     carregar.estoque = wsprodutos.getRange(Linha, 6).getValue()
-    // carregar.fortmvut = new Intl.NumberFormat('pt-BR',{
-    //   style: 'currency',
-    //   currency: 'BRL',
-    //   minimunFractionDigits: 2
-    // }).format(carregar.vunit)
+
     return ([carregar.idpd,carregar.tipo,carregar.descricao,carregar.unid,carregar.vunit,carregar.estoque])
-  // Logger.log( carregar.tipo)
-  //  Logger.log(  carregar.idpd)
-  //   Logger.log( carregar.descricao)
-  //   Logger.log( carregar.vunit)
-  //   Logger.log( carregar.estoque)
+
     
   }else{
     return 'Sretorno'
@@ -36,9 +28,3 @@ function pesquisarproduto(codpesquisa){
 
 
 
-Array.prototype.pesquisapd = function(Procura){
-  if(Procura == "") return false;
-  for (var Linha=0; Linha<this.length; Linha ++)
-  if (this[Linha]==Procura) return Linha;
-  return -1
-}
