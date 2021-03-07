@@ -1,14 +1,14 @@
 <script>
   document.addEventListener("DOMContentLoaded", function (tablecadastro) {
   $("#produtoped").on("change", pesquisarprod )
-  $("#qtped").on("change", pesquisarprod )
+  $("#qt-kg").on("change", pesquisarprod )
   $("#icluir-pedido").hide()
   $("#finalizar-pedido").hide()
+  $("#bar-progress").hide()
+  // $("#div-qt-qt").hide()
+  // $("#div-qt-kg").hide()
+
 })
-
-
-
-
 function pesquisarprod() {
   
   var codpesquisa = document.getElementById("produtoped").value
@@ -16,10 +16,15 @@ function pesquisarprod() {
   // console.log(codpesquisa)
 }
 function carregar(retorno){
-
+  
 
   if (retorno != 'Sretorno'){
-    const vunti = retorno[5]
+
+    $("#bar-progress").show()
+    const vunti = retorno[4]
+    const unid = retorno[3]
+    const kg = "KG"
+    
     const formatvut = new Intl.NumberFormat('pt-BR',{
       style: 'currency',
       currency: 'BRL',
@@ -28,6 +33,8 @@ function carregar(retorno){
 
     $("#icluir-pedido").show()
     $("#finalizar-pedido").show()
+  
+    
 
     document.getElementById("cod-prod").innerText = "COD PRODUTO :" + " "
     document.getElementById("simbol-produto").innerText = "#"
@@ -41,14 +48,31 @@ function carregar(retorno){
     document.getElementById("unidc-ped").innerText = retorno[3]
     document.getElementById("vunit-ped").innerText = formatvut
     document.getElementById("tipo-ped").innerText = retorno[1]
-    const qtpd = document.getElementById("qtped").value
+    const qtpd = document.getElementById("qt-kg").value
+   
     const result =  vunti *  qtpd 
+    
     const vtotal = result
     document.getElementById("Total-includ").innerText = new Intl.NumberFormat('pt-BR',{
       style: 'currency',
       currency: 'BRL',
       minimunFractionDigits: 2
     }).format(vtotal)
+
+    // if(unid == kg ){
+    //   $("#div-qt-qt").hide()
+    //   $("#div-qt-kg").show()
+    // }if(unid != kg){
+    //   $("#div-qt-qt").show()
+    //   $("#div-qt-kg").hide()
+    // }
+    if(unid == kg){
+      document.getElementById("titulo-qt").innerText = "KG - Exemplo 1.200"
+    }if(unid != kg){
+      document.getElementById("titulo-qt").innerText = "QT - Exemp 1"
+    }
+  
+    $("#bar-progress").hide()
   }
   }
 
